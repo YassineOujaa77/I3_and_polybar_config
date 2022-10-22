@@ -212,3 +212,7 @@ for_window [floating] move position center
 
 # remove windows's title 
 for_window [class="^.*"] border pixel 1
+
+
+# exec ticktick on startup 
+exec ticktick
