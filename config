@@ -154,8 +154,11 @@ bindsym $mod+Shift+underscore move container to workspace number $ws8
 bindsym $mod+Shift+ccedilla move container to workspace number $ws9
 bindsym $mod+Shift+agrave move container to workspace number $ws10
 
+assign [class="firefox"] $ws2
+assign [class="Code"] $ws2
+assign [class="jetbrains-studio"] $ws2
 
-assign class=["Code"] $ws2
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -207,12 +210,23 @@ exec nitrogen --set-zoom-fill --random /home/yassine/Downloads/wallpapers-master
 # polybar execution 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# making the popup windows centered 
-for_window [floating] move position center
 
 # remove windows's title 
 for_window [class="^.*"] border pixel 1
 
+# Execute Ticktick 
+exec ticktick  
 
-# exec ticktick on startup 
-exec ticktick
+# tests
+
+# Pulse Audio controls
+# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5% #increase sound volume
+# bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5% #decrease sound volume
+# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Sreen brightness controls
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+
