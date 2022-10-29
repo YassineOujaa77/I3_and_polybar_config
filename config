@@ -154,9 +154,10 @@ bindsym $mod+Shift+underscore move container to workspace number $ws8
 bindsym $mod+Shift+ccedilla move container to workspace number $ws9
 bindsym $mod+Shift+agrave move container to workspace number $ws10
 
-assign [class="firefox"] $ws2
+assign [class="firefox"] $ws1
 assign [class="Code"] $ws2
 assign [class="jetbrains-studio"] $ws2
+assign [class="jetbrains-idea"] $ws2
 
 
 
@@ -230,3 +231,4 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 
+exec_always "setxkbmap -model pc104 -layout fr,ar -variant ,, -option grp:alt_shift_toggle"
