@@ -232,3 +232,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 
 
 exec_always "setxkbmap -model pc104 -layout fr,ar -variant ,, -option grp:alt_shift_toggle"
+
+
+# add bindkey for browser
+bindsym $mod+w exec firefox
